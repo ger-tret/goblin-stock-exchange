@@ -9,5 +9,7 @@ import java.util.UUID;
 
 public interface OrderRepository extends JpaRepository<Order, UUID> {
     List<Order> findAllByBrokerId(UUID brokerId);
+
     List<Order> findAllByStatus(OrderStatus status);
+
 }

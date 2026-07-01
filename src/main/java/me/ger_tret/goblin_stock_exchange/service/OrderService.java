@@ -1,8 +1,11 @@
 package me.ger_tret.goblin_stock_exchange.service;
 
 
+import me.ger_tret.goblin_stock_exchange.entity.Order;
 import me.ger_tret.goblin_stock_exchange.entity.dto.OrderRequestDto;
+import me.ger_tret.goblin_stock_exchange.entity.dto.OrderResponseDto;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.UUID;
 
@@ -11,7 +14,7 @@ public interface OrderService {
 
     void cancelOrder(UUID orderId);
 
-    List<OrderRequestDto> getOrdersByBroker(UUID brokerId);
+    List<OrderResponseDto> getOrdersByBroker(UUID brokerId);
 
-    void executeOrder(UUID orderId);
+    void executeTrade(Order buyOrder, Order sellOrder, Integer quantity, BigDecimal price);
 }

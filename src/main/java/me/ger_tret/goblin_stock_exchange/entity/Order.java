@@ -11,8 +11,9 @@ import java.time.OffsetDateTime;
 import java.util.UUID;
 
 @Entity
-@Table(name = "order")
-@Getter @Setter
+@Table(name = "orders")
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
@@ -48,7 +49,7 @@ public class Order {
     private OffsetDateTime createdAt;
 
     @PrePersist
-    protected void onCreate(){
+    protected void onCreate() {
         this.createdAt = OffsetDateTime.now();
     }
 }

@@ -10,7 +10,8 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "assets")
-@Getter @Setter
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder

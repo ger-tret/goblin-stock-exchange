@@ -10,7 +10,8 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "brokers")
-@Getter @Setter
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
@@ -31,7 +32,7 @@ public class Broker {
     private OffsetDateTime createdAt;
 
     @PrePersist
-    protected void onCreate(){
+    protected void onCreate() {
         this.createdAt = OffsetDateTime.now();
         this.goldBalance = new BigDecimal("1000.000");
         this.reputation = 0;

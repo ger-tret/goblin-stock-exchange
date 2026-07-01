@@ -3,13 +3,17 @@ package me.ger_tret.goblin_stock_exchange.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import me.ger_tret.goblin_stock_exchange.entity.constant.OrderStatus;
+import me.ger_tret.goblin_stock_exchange.entity.constant.OrderType;
 
+import java.math.BigDecimal;
 import java.time.OffsetDateTime;
 import java.util.UUID;
 
 @Entity
-@Table(name = "order")
-@Getter @Setter
+@Table(name = "orders")
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
@@ -27,15 +31,25 @@ public class Order {
     private Asset asset;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "order_type")
+    @Column(name = "order_type", nullable = false)
+    private OrderType orderType;
 
+    @Enumerated(EnumType.STRING)
+    @Column(name = "order_status", nullable = false)
+    private OrderStatus status;
+
+    @Column(nullable = false, updatable = false)
     private Integer quantity;
+
+    @Column(nullable = false, precision = 19, scale = 4, updatable = false)
+    private BigDecimal price;
+
 
     @Column(name = "created_at")
     private OffsetDateTime createdAt;
 
     @PrePersist
-    protected void onCreate(){
+    protected void onCreate() {
         this.createdAt = OffsetDateTime.now();
     }
 }

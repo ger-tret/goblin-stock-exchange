@@ -78,7 +78,7 @@
   },
   {
     "name": "Mana-Drain Utilities",
-    "ticker": "VOID",
+    "ticker": "MVOID",
     "type": "RUNE",
     "basePrice": 55.0,
     "description": "Providing the kingdom with magic by siphoning it directly from the dreams of local peasants."
@@ -533,7 +533,7 @@
   },
   {
     "name": "Pegasus Postal Service",
-    "ticker": "HOOF",
+    "ticker": "HOPF",
     "type": "INGREDIENT",
     "basePrice": 30.0,
     "description": "Air-mail that leaves a glittery trail and the occasional mess on your lawn."

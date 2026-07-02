@@ -25,7 +25,7 @@ public class BotOrchestrator {
     private final EntityMapper mapper;
     private final BotRunnerService botRunner;
 
-    @Scheduled(fixedDelayString = "${gse.simulation.interval:10000} ")
+    @Scheduled(fixedDelayString = "${gse.simulation.interval:10000}")
     public void awakeBots(){
         List<Broker> botList = brokerRepository.findAllByBrokerType(BrokerType.BOT);
 

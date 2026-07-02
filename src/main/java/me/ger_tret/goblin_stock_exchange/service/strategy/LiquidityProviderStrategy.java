@@ -2,7 +2,7 @@ package me.ger_tret.goblin_stock_exchange.service.strategy;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import me.ger_tret.goblin_stock_exchange.entity.constant.OrderType;
+import me.ger_tret.goblin_stock_exchange.entity.enums.OrderType;
 import me.ger_tret.goblin_stock_exchange.entity.dto.BrokerDto;
 import me.ger_tret.goblin_stock_exchange.entity.dto.OrderRequestDto;
 import me.ger_tret.goblin_stock_exchange.service.AssetService;

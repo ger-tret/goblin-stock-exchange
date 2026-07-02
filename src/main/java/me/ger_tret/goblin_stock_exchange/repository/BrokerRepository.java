@@ -2,7 +2,7 @@ package me.ger_tret.goblin_stock_exchange.repository;
 
 import jakarta.persistence.LockModeType;
 import me.ger_tret.goblin_stock_exchange.entity.Broker;
-import me.ger_tret.goblin_stock_exchange.entity.constant.BrokerType;
+import me.ger_tret.goblin_stock_exchange.entity.enums.BrokerType;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Lock;
 import org.springframework.data.jpa.repository.Query;

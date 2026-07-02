@@ -1,6 +1,6 @@
 package me.ger_tret.goblin_stock_exchange.entity.dto;
 
-import me.ger_tret.goblin_stock_exchange.entity.constant.BrokerType;
+import me.ger_tret.goblin_stock_exchange.entity.enums.BrokerType;
 
 import java.math.BigDecimal;
 import java.util.UUID;

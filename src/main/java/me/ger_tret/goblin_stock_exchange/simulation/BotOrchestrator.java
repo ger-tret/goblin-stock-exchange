@@ -1,14 +1,13 @@
-package me.ger_tret.goblin_stock_exchange.config;
+package me.ger_tret.goblin_stock_exchange.simulation;
 
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import me.ger_tret.goblin_stock_exchange.entity.Broker;
-import me.ger_tret.goblin_stock_exchange.entity.constant.BrokerType;
+import me.ger_tret.goblin_stock_exchange.entity.enums.BrokerType;
 import me.ger_tret.goblin_stock_exchange.entity.dto.BrokerDto;
 import me.ger_tret.goblin_stock_exchange.mapper.EntityMapper;
 import me.ger_tret.goblin_stock_exchange.repository.BrokerRepository;
-import me.ger_tret.goblin_stock_exchange.service.BotRunnerService;
 import me.ger_tret.goblin_stock_exchange.service.strategy.BotStrategy;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.Scheduled;

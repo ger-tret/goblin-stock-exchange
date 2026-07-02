@@ -3,7 +3,7 @@ package me.ger_tret.goblin_stock_exchange.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-import me.ger_tret.goblin_stock_exchange.entity.constant.BrokerType;
+import me.ger_tret.goblin_stock_exchange.entity.enums.BrokerType;
 
 import java.math.BigDecimal;
 import java.time.OffsetDateTime;

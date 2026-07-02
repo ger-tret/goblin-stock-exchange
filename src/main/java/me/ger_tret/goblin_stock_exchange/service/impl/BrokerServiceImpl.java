@@ -2,7 +2,7 @@ package me.ger_tret.goblin_stock_exchange.service.impl;
 
 import lombok.RequiredArgsConstructor;
 import me.ger_tret.goblin_stock_exchange.entity.Broker;
-import me.ger_tret.goblin_stock_exchange.entity.constant.BrokerType;
+import me.ger_tret.goblin_stock_exchange.entity.enums.BrokerType;
 import me.ger_tret.goblin_stock_exchange.entity.dto.BrokerDto;
 import me.ger_tret.goblin_stock_exchange.exception.GseException;
 import me.ger_tret.goblin_stock_exchange.exception.InsufficientGoldException;

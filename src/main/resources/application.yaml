@@ -34,6 +34,8 @@ gse:
   simulation:
     enabled: true
     interval: 10000
+  market:
+    max-price-deviation: 0.20
 
 logging:
   level:

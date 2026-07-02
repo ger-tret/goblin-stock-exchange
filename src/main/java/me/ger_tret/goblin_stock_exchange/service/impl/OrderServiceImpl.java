@@ -12,6 +12,7 @@ import me.ger_tret.goblin_stock_exchange.entity.enums.OrderType;
 import me.ger_tret.goblin_stock_exchange.entity.dto.OrderRequestDto;
 import me.ger_tret.goblin_stock_exchange.entity.dto.OrderResponseDto;
 import me.ger_tret.goblin_stock_exchange.exception.GseException;
+import me.ger_tret.goblin_stock_exchange.exception.InvalidOrderPriceException;
 import me.ger_tret.goblin_stock_exchange.mapper.EntityMapper;
 import me.ger_tret.goblin_stock_exchange.repository.OrderRepository;
 import me.ger_tret.goblin_stock_exchange.repository.TradeTransactionRepository;
@@ -19,6 +20,7 @@ import me.ger_tret.goblin_stock_exchange.service.AssetService;
 import me.ger_tret.goblin_stock_exchange.service.BrokerService;
 import me.ger_tret.goblin_stock_exchange.service.InventoryService;
 import me.ger_tret.goblin_stock_exchange.service.OrderService;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -43,6 +45,9 @@ public class OrderServiceImpl implements OrderService {
 
     private final EntityMapper mapper;
 
+    @Value("${gse.market.max-price-deviation:0.20}")
+    private BigDecimal maxPriceDeviation;
+
     @Override
     @Transactional
     public UUID placeOrder(UUID brokerId, OrderRequestDto request) {
@@ -51,6 +56,7 @@ public class OrderServiceImpl implements OrderService {
 
         Broker broker = fetchBroker(brokerId);
         Asset asset = fetchAsset(request.assetId());
+        validatePriceRange(request.price(), asset.getBasePrice());
 
         if (request.type() == OrderType.BUY) {
             double randomModifier = 0.9 + (ThreadLocalRandom.current().nextDouble() * 0.2);
@@ -142,6 +148,17 @@ public class OrderServiceImpl implements OrderService {
     private void completeOrder(Order order) {
         order.setStatus(OrderStatus.FILLED);
         orderRepository.save(order);
+    }
+
+    private void validatePriceRange(BigDecimal orderPrice, BigDecimal marketPrice) {
+        BigDecimal deviation = orderPrice.subtract(marketPrice).abs()
+                .divide(marketPrice, 4, RoundingMode.HALF_UP);
+
+        if (deviation.compareTo(maxPriceDeviation) > 0) {
+            log.warn("Price deviation too high: {} (Market: {}, Order: {})",
+                    deviation, marketPrice, orderPrice);
+            throw new InvalidOrderPriceException(orderPrice, marketPrice);
+        }
     }
 
     private Broker fetchBroker(UUID id) {

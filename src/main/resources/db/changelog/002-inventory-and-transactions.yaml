@@ -1,0 +1,84 @@
+databaseChangeLog:
+  - changeSet:
+      id: 4
+      author: ger-tret
+      changes:
+        - createTable:
+            tableName: inventories
+            columns:
+              - column:
+                  name: id
+                  type: UUID
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: broker_id
+                  type: UUID
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_inventory_broker
+                    referencedTableName: brokers
+                    referencedColumnNames: id
+              - column:
+                  name: asset_id
+                  type: UUID
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_inventory_asset
+                    referencedTableName: assets
+                    referencedColumnNames: id
+              - column:
+                  name: quantity
+                  type: int
+                  defaultValueNumeric: 0
+                  constraints:
+                    nullable: false
+        - addUniqueConstraint:
+            columnNames: broker_id, asset_id
+            constraintName: uk_broker_asset
+            tableName: inventories
+
+  - changeSet:
+      id: 5
+      author: ger-tret
+      changes:
+        - createTable:
+            tableName: trade_transactions
+            columns:
+              - column:
+                  name: id
+                  type: UUID
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: buy_order_id
+                  type: UUID
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_tx_buy_order
+                    referencedTableName: orders
+                    referencedColumnNames: id
+              - column:
+                  name: sell_order_id
+                  type: UUID
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_tx_sell_order
+                    referencedTableName: orders
+                    referencedColumnNames: id
+              - column:
+                  name: quantity
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: price
+                  type: DECIMAL(19, 4)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: executed_at
+                  type: TIMESTAMP WITH TIME ZONE
+                  defaultValueComputed: CURRENT_TIMESTAMP

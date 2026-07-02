@@ -8,7 +8,7 @@ import java.util.UUID;
 public record BrokerDto(
         UUID id,
         String username,
-        BigDecimal goldbalance,
+        BigDecimal goldBalance,
         BrokerType brokerType,
         Integer reputation
 ) {

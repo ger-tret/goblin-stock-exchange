@@ -40,8 +40,12 @@ public class Broker {
     @PrePersist
     protected void onCreate() {
         this.createdAt = OffsetDateTime.now();
-        this.goldBalance = new BigDecimal("1000.000");
-        this.reputation = 0;
+        if (this.goldBalance == null) {
+            this.goldBalance = new BigDecimal("1000.0000");
+        }
+        if (this.reputation == null) {
+            this.reputation = 0;
+        }
     }
 
 }

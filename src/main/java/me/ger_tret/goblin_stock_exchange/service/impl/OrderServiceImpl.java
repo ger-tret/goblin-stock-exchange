@@ -68,8 +68,9 @@ public class OrderServiceImpl implements OrderService {
                 .price(request.price())
                 .build();
 
-        log.info("<<< ORDER PLACED: ID={}, Status={}, Broker={}", order.getId(), order.getStatus(), broker.getUsername());
-        return orderRepository.save(order).getId();
+        Order saved = orderRepository.saveAndFlush(order);
+        log.info("<<< ORDER PLACED: ID={}, Status={}, Broker={}", saved.getId(), saved.getStatus(), broker.getUsername());
+        return saved.getId();
     }
 
     @Override

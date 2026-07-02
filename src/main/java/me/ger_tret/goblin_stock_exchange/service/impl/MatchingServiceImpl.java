@@ -29,7 +29,7 @@ public class MatchingServiceImpl implements MatchingService {
     private final OrderService orderService;
 
     @Override
-    @Scheduled(fixedDelayString = "{gse.matching.interval}")
+    @Scheduled(fixedDelayString = "${gse.matching.interval:2000}")
     public void performMatching() {
         log.debug("Starting matching cycle...");
 

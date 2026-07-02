@@ -23,8 +23,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.List;
 import java.util.UUID;
+import java.util.concurrent.ThreadLocalRandom;
 
 @Service
 @Slf4j
@@ -51,7 +53,10 @@ public class OrderServiceImpl implements OrderService {
         Asset asset = fetchAsset(request.assetId());
 
         if (request.type() == OrderType.BUY) {
-            BigDecimal totalCost = request.price().multiply(BigDecimal.valueOf(request.quantity()));
+            double randomModifier = 0.9 + (ThreadLocalRandom.current().nextDouble() * 0.2);
+            BigDecimal totalCost = request.price()
+                    .multiply(BigDecimal.valueOf(randomModifier))
+                    .setScale(4, RoundingMode.HALF_UP);
             log.info("Order type BUY: Checking if broker {} can afford {} gold", brokerId, totalCost);
             brokerService.validateBalance(brokerId, totalCost);
         } else {
@@ -79,7 +84,10 @@ public class OrderServiceImpl implements OrderService {
         log.info("Orchestrating trade execution: {} units at {}", quantity, price);
         log.info("Matching BuyOrder[{}] with SellOrder[{}]", buyOrder.getId(), sellOrder.getId());
 
-        BigDecimal totalCost = price.multiply(BigDecimal.valueOf(quantity));
+        double randomModifier = 0.9 + (ThreadLocalRandom.current().nextDouble() * 0.2);
+        BigDecimal totalCost = price
+                .multiply(BigDecimal.valueOf(randomModifier))
+                .setScale(4, RoundingMode.HALF_UP);
         UUID buyerId = buyOrder.getBroker().getId();
         UUID sellerId = sellOrder.getBroker().getId();
         UUID assetId = buyOrder.getAsset().getId();

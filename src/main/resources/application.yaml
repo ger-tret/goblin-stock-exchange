@@ -1,3 +1,46 @@
+server:
+  port: 8080
+
 spring:
   application:
     name: goblin-stock-exchange
+
+  datasource:
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/goblin_db}
+    username: ${DATABASE_USER:goblin}
+    password: ${DATABASE_PASS:secret}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc:
+          batch_size: 20 #
+        order_inserts: true
+        order_updates: true
+
+  liquibase:
+    change-log: classpath:db/db.changelog-master.yaml
+    enabled: true
+
+gse:
+  matching:
+    interval: 2000
+  simulation:
+    enabled: true
+    interval: 10000 # Боты активничают раз в 10 сек
+
+# Настройка логирования
+logging:
+  level:
+    root: INFO
+    me.ger_tret.goblin_stock_exchange: INFO
+    # Чтобы видеть маты Matching Engine, можно поставить DEBUG
+    me.ger_tret.goblin_stock_exchange.service.impl.MatchingServiceImpl: DEBUG
+  pattern:
+    console: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"

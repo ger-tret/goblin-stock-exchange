@@ -1,0 +1,709 @@
+[
+  {
+    "name": "Dread-Ledger Asset Management",
+    "ticker": "DEAD",
+    "type": "ARTIFACT",
+    "basePrice": 420.69,
+    "description": "An accounting firm where the books are bound in human skin and the interest rates are literally soul-crushing."
+  },
+  {
+    "name": "Silicon Sigils Ltd.",
+    "ticker": "SIGL",
+    "type": "RUNE",
+    "basePrice": 88.5,
+    "description": "The leading provider of low-latency spell-casting logic for automated orb-pondering."
+  },
+  {
+    "name": "Hell-Gate Heavy Lifting",
+    "ticker": "HATE",
+    "type": "WEAPON",
+    "basePrice": 315.0,
+    "description": "Demonic logistics. We move mountains, usually onto the houses of our competitors."
+  },
+  {
+    "name": "Slime-Light Media",
+    "ticker": "OOZE",
+    "type": "SLIME",
+    "basePrice": 12.4,
+    "description": "The premiere streaming service for sentient molds and gelatinous cubes."
+  },
+  {
+    "name": "Unicorn Blood Ventures",
+    "ticker": "UBV",
+    "type": "INGREDIENT",
+    "basePrice": 1500.0,
+    "description": "High-risk venture capital that specializes in 'killing' the competition to achieve immortality in the market."
+  },
+  {
+    "name": "Mithril-Core Microchips",
+    "ticker": "MTHL",
+    "type": "ARTIFACT",
+    "basePrice": 650.0,
+    "description": "Hardware so light and durable it can survive a direct strike from a Balrog or a spilled coffee."
+  },
+  {
+    "name": "Eldritch Eye-Cloud",
+    "ticker": "EYE",
+    "type": "RUNE",
+    "basePrice": 210.0,
+    "description": "Decentralized storage where your data is watched over by a thousand unblinking eyes."
+  },
+  {
+    "name": "Mimic-Chest Logistics",
+    "ticker": "CHOMP",
+    "type": "SLIME",
+    "basePrice": 45.0,
+    "description": "Delivery services where the packaging eats porch pirates. Usually eats the package too."
+  },
+  {
+    "name": "Phoenix Down-Sizing Inc.",
+    "ticker": "BURN",
+    "type": "INGREDIENT",
+    "basePrice": 95.0,
+    "description": "A consultancy firm specializing in firing entire departments and rehiring them from the ashes at lower wages."
+  },
+  {
+    "name": "Acheron Infrastructure",
+    "ticker": "FERY",
+    "type": "ARTIFACT",
+    "basePrice": 330.0,
+    "description": "Bridges, tunnels, and soul-ferries. We guarantee you'll get to the other side."
+  },
+  {
+    "name": "Golgotha Steel & Soul",
+    "ticker": "GSS",
+    "type": "WEAPON",
+    "basePrice": 280.5,
+    "description": "Industrial grade swords forged in the heat of existential despair."
+  },
+  {
+    "name": "Mana-Drain Utilities",
+    "ticker": "VOID",
+    "type": "RUNE",
+    "basePrice": 55.0,
+    "description": "Providing the kingdom with magic by siphoning it directly from the dreams of local peasants."
+  },
+  {
+    "name": "Troll-Bridge Toll-Tech",
+    "ticker": "TRL",
+    "type": "WEAPON",
+    "basePrice": 140.0,
+    "description": "Automated security systems for infrastructure. If they don't pay, they get clubbed."
+  },
+  {
+    "name": "Innsmouth Seafood & Shipping",
+    "ticker": "FISH",
+    "type": "SLIME",
+    "basePrice": 22.0,
+    "description": "The fish tastes weird and the delivery drivers have too many fingers, but the margins are incredible."
+  },
+  {
+    "name": "Gringott-Standard Gold",
+    "ticker": "AU",
+    "type": "INGREDIENT",
+    "basePrice": 1900.0,
+    "description": "Pure physical gold, certified dragon-guarded and curse-free (99% of the time)."
+  },
+  {
+    "name": "Warp-Speed Portals",
+    "ticker": "WARP",
+    "type": "ARTIFACT",
+    "basePrice": 850.0,
+    "description": "Inter-dimensional travel. Side effects may include growing a second head or losing your tax exemptions."
+  },
+  {
+    "name": "Orc-ish Open Source",
+    "ticker": "WAAGH",
+    "type": "RUNE",
+    "basePrice": 5.0,
+    "description": "Software that only works if you yell at the screen loud enough."
+  },
+  {
+    "name": "Cthulhu Consulting Group",
+    "ticker": "FHTN",
+    "type": "SLIME",
+    "basePrice": 666.0,
+    "description": "Strategic advice from beings who have seen the end of time. It's mostly bad news."
+  },
+  {
+    "name": "Bottomless Pit Disposables",
+    "ticker": "HOLE",
+    "type": "ARTIFACT",
+    "basePrice": 75.0,
+    "description": "The ultimate solution for toxic waste and unwanted interns."
+  },
+  {
+    "name": "Griffin Air-Freight",
+    "ticker": "WING",
+    "type": "INGREDIENT",
+    "basePrice": 115.0,
+    "description": "Next-day delivery by giant predatory birds. Please do not pet the courier."
+  },
+  {
+    "name": "Alchemy & Acquisitions",
+    "ticker": "ALCH",
+    "type": "INGREDIENT",
+    "basePrice": 440.0,
+    "description": "Turning leaden startups into golden IPOs through sheer magical manipulation."
+  },
+  {
+    "name": "Beholder Surveillance Systems",
+    "ticker": "GAZE",
+    "type": "ARTIFACT",
+    "basePrice": 900.0,
+    "description": "Total workplace monitoring. We see what you're thinking, and we're docking your pay for it."
+  },
+  {
+    "name": "Banshee Broadband",
+    "ticker": "WAIL",
+    "type": "RUNE",
+    "basePrice": 60.0,
+    "description": "The fastest crystal-ball internet, though the connection noise is psychologically damaging."
+  },
+  {
+    "name": "Dragon-Hoard Insurance",
+    "ticker": "FIRE",
+    "type": "WEAPON",
+    "basePrice": 250.0,
+    "description": "Premium coverage for your treasure. Does not cover theft by 'Chosen Ones' or 'Protagonists'."
+  },
+  {
+    "name": "Zombie Labor Solutions",
+    "ticker": "ZLS",
+    "type": "SLIME",
+    "basePrice": 15.0,
+    "description": "Why pay a living wage when you can pay a necromancy fee? They never take lunch breaks."
+  },
+  {
+    "name": "Excalibur Arms Corp.",
+    "ticker": "SWORD",
+    "type": "WEAPON",
+    "basePrice": 5000.0,
+    "description": "Luxury blades for the discerning monarch. Management is not responsible for Lady of the Lake disputes."
+  },
+  {
+    "name": "Goblin Market Index",
+    "ticker": "GMX",
+    "type": "ARTIFACT",
+    "basePrice": 120.0,
+    "description": "An index fund tracking the price of stolen trinkets and shiny buttons."
+  },
+  {
+    "name": "Mana-Loaf Bakery Chain",
+    "ticker": "BREAD",
+    "type": "INGREDIENT",
+    "basePrice": 8.0,
+    "description": "Retail bread that fills your HP but lowers your dignity."
+  },
+  {
+    "name": "Hydra-Headed Marketing",
+    "ticker": "MANY",
+    "type": "SLIME",
+    "basePrice": 300.0,
+    "description": "Cut off one ad campaign, and two more appear in your social feed."
+  },
+  {
+    "name": "Rune-Scape Real Estate",
+    "ticker": "LAND",
+    "type": "RUNE",
+    "basePrice": 780.0,
+    "description": "Selling plots of land in dimensions that may or may not exist on Tuesdays."
+  },
+  {
+    "name": "Grim-Reaper Life Insurance",
+    "ticker": "RIP",
+    "type": "ARTIFACT",
+    "basePrice": 200.0,
+    "description": "We don't prevent death; we just make sure your enemies can't afford your funeral."
+  },
+  {
+    "name": "Vampire Wealth Management",
+    "ticker": "BLOOD",
+    "type": "INGREDIENT",
+    "basePrice": 1200.0,
+    "description": "We take a small bite out of your savings every night. Forever."
+  },
+  {
+    "name": "Labyrinth Logistics",
+    "ticker": "MAZE",
+    "type": "ARTIFACT",
+    "basePrice": 145.0,
+    "description": "Our warehouses are infinite. Our staff is mostly minotaurs. Good luck finding your return."
+  },
+  {
+    "name": "Sigil-Bit Crypto",
+    "ticker": "COIN",
+    "type": "RUNE",
+    "basePrice": 0.01,
+    "description": "A currency backed by the collective delusion of wizards."
+  },
+  {
+    "name": "Centaur Cybernetics",
+    "ticker": "HOOF",
+    "type": "ARTIFACT",
+    "basePrice": 890.0,
+    "description": "Augmenting the natural world with enchanted machinery. Mostly focused on high-speed galloping."
+  },
+  {
+    "name": "Dryad Data Centers",
+    "ticker": "TREE",
+    "type": "RUNE",
+    "basePrice": 410.0,
+    "description": "Eco-friendly servers hosted inside ancient oaks. Be careful of woodworms in the firewall."
+  },
+  {
+    "name": "Basics by Baba Yaga",
+    "ticker": "HUT",
+    "type": "ARTIFACT",
+    "basePrice": 190.0,
+    "description": "Retail home goods that occasionally try to walk away on chicken legs."
+  },
+  {
+    "name": "Leviathan Oil & Gas",
+    "ticker": "SEA",
+    "type": "INGREDIENT",
+    "basePrice": 95.0,
+    "description": "Extracting the bioluminescent fluids of ancient sea gods for your lamp."
+  },
+  {
+    "name": "Chariot Rideshare",
+    "ticker": "WHEL",
+    "type": "WEAPON",
+    "basePrice": 35.0,
+    "description": "Cheap transport. 5-star rating requires surviving the spiked wheels."
+  },
+  {
+    "name": "Sphinx Security Solutions",
+    "ticker": "ASK",
+    "type": "WEAPON",
+    "basePrice": 560.0,
+    "description": "Two-factor authentication involving riddles about the meaning of life. Failure results in consumption."
+  },
+  {
+    "name": "Gargoyle Property Guards",
+    "ticker": "ROCK",
+    "type": "ARTIFACT",
+    "basePrice": 220.0,
+    "description": "They just sit there until someone tries to unionize. Then they get heavy."
+  },
+  {
+    "name": "Mandrake Mobile",
+    "ticker": "SCREAM",
+    "type": "RUNE",
+    "basePrice": 45.0,
+    "description": "The only smartphone that screams when the battery hits 1%."
+  },
+  {
+    "name": "Cerberus Compliance",
+    "ticker": "DOGS",
+    "type": "WEAPON",
+    "basePrice": 670.0,
+    "description": "A three-headed approach to legal loopholes. One head bites, one head barks, one head sleeps."
+  },
+  {
+    "name": "Styx Water Bottling Co.",
+    "ticker": "FORG",
+    "type": "INGREDIENT",
+    "basePrice": 5.5,
+    "description": "One sip and you'll forget why you were thirsty. Or who you are."
+  },
+  {
+    "name": "Kobold Mining Corp.",
+    "ticker": "DIG",
+    "type": "INGREDIENT",
+    "basePrice": 18.0,
+    "description": "Safety standards? We prefer the term 'Exciting Variables'."
+  },
+  {
+    "name": "Nirvana Asset Liquidation",
+    "ticker": "ZEN",
+    "type": "ARTIFACT",
+    "basePrice": 0.0,
+    "description": "We help you achieve financial nothingness. Your debt simply ceases to exist (along with your house)."
+  },
+  {
+    "name": "Poltergeist Power & Light",
+    "ticker": "BOO",
+    "type": "SLIME",
+    "basePrice": 88.0,
+    "description": "Harnessing the kinetic energy of haunted mansions to flip your light switches."
+  },
+  {
+    "name": "Chimera Chemicals",
+    "ticker": "MIX",
+    "type": "SLIME",
+    "basePrice": 140.0,
+    "description": "What happens when you mix goat DNA with high-octane mana? Profit."
+  },
+  {
+    "name": "Valhalla Funeral Parlors",
+    "ticker": "SKAL",
+    "type": "ARTIFACT",
+    "basePrice": 999.0,
+    "description": "The most expensive way to ensure you're still fighting in the afterlife."
+  },
+  {
+    "name": "Dwarven Deep-Core Drillers",
+    "ticker": "BORE",
+    "type": "ARTIFACT",
+    "basePrice": 1100.0,
+    "description": "Mining the planet’s mantle for concentrated greed."
+  },
+  {
+    "name": "Faerie Fire Optic",
+    "ticker": "GLOW",
+    "type": "RUNE",
+    "basePrice": 72.0,
+    "description": "Magical fiber-optic cables made of woven moonlight and spite."
+  },
+  {
+    "name": "Succubus PR & Talent",
+    "ticker": "LUST",
+    "type": "SLIME",
+    "basePrice": 340.0,
+    "description": "We make your brand irresistible. Warning: may result in loss of willpower."
+  },
+  {
+    "name": "Cyclops Sight & Sound",
+    "ticker": "ONE",
+    "type": "ARTIFACT",
+    "basePrice": 155.0,
+    "description": "Specializing in monaural audio and 2D television. Perspective is overrated."
+  },
+  {
+    "name": "Harpy Air-Traffic Control",
+    "ticker": "SQUAWK",
+    "type": "WEAPON",
+    "basePrice": 210.0,
+    "description": "We manage the skies with high-pitched screams and zero tolerance for delays."
+  },
+  {
+    "name": "Medusa Mirror Works",
+    "ticker": "STONE",
+    "type": "ARTIFACT",
+    "basePrice": 305.0,
+    "description": "High-quality mirrors. Please wear a blindfold during installation."
+  },
+  {
+    "name": "Necro-Nominal Payroll",
+    "ticker": "PAY",
+    "type": "RUNE",
+    "basePrice": 44.0,
+    "description": "Software that ensures your employees are paid even after they die. It's a life-term contract."
+  },
+  {
+    "name": "Wyvern Web Services",
+    "ticker": "WWS",
+    "type": "RUNE",
+    "basePrice": 520.0,
+    "description": "Cloud hosting for the truly ambitious. Our servers are located in a volcanic caldera."
+  },
+  {
+    "name": "Alchemist’s Armory",
+    "ticker": "BOOM",
+    "type": "WEAPON",
+    "basePrice": 180.0,
+    "description": "Retailer of explosive potions. One-time use. No refunds for missing limbs."
+  },
+  {
+    "name": "Great-Old-One Gaming",
+    "ticker": "RLEH",
+    "type": "SLIME",
+    "basePrice": 60.0,
+    "description": "Video games with non-euclidean geometry. You don't play the game, it plays your psyche."
+  },
+  {
+    "name": "Golem Assembly Lines",
+    "ticker": "CLAY",
+    "type": "ARTIFACT",
+    "basePrice": 950.0,
+    "description": "Mass-produced clay laborers. Occasionally they develop a 'consciousness bug' and crush the CEO."
+  },
+  {
+    "name": "Pixie-Dust Pharmaceuticals",
+    "ticker": "HIGH",
+    "type": "INGREDIENT",
+    "basePrice": 85.5,
+    "description": "Antidepressants that literally make you float. Side effects include a fear of cats."
+  },
+  {
+    "name": "Minotaur Maze Mapping",
+    "ticker": "GPS",
+    "type": "RUNE",
+    "basePrice": 25.0,
+    "description": "The only navigation app that works in cursed dungeons and IKEA."
+  },
+  {
+    "name": "Soul-Swap Equity Partners",
+    "ticker": "SWAP",
+    "type": "ARTIFACT",
+    "basePrice": 1300.0,
+    "description": "Hedge fund specializing in swapping your underperforming soul for a diversified portfolio."
+  },
+  {
+    "name": "Manticore Munitions",
+    "ticker": "SPIKE",
+    "type": "WEAPON",
+    "basePrice": 450.0,
+    "description": "Long-range ballistic tail-spikes. Precision-engineered for siege warfare."
+  },
+  {
+    "name": "Dream-Weaver Textiles",
+    "ticker": "SOFT",
+    "type": "INGREDIENT",
+    "basePrice": 110.0,
+    "description": "Luxury fabrics woven from the dreams of sleeping giants. Machine washable."
+  },
+  {
+    "name": "Familiar-Finder Corp.",
+    "ticker": "PET",
+    "type": "SLIME",
+    "basePrice": 65.0,
+    "description": "Tinder for wizards. Find the perfect toad or owl to judge your life choices."
+  },
+  {
+    "name": "Abyssal Coal & Ore",
+    "ticker": "DARK",
+    "type": "INGREDIENT",
+    "basePrice": 40.0,
+    "description": "Mining the darkness itself. It burns hotter because it's full of hate."
+  },
+  {
+    "name": "Kraken Cable & Internet",
+    "ticker": "TENT",
+    "type": "RUNE",
+    "basePrice": 75.0,
+    "description": "Deep-sea data cables. Occasionally snagged by monsters, causing a 300-year lag."
+  },
+  {
+    "name": "Valkyrie Venture Capital",
+    "ticker": "CHOS",
+    "type": "WEAPON",
+    "basePrice": 880.0,
+    "description": "We only invest in startups that are ready to die for their product."
+  },
+  {
+    "name": "Ogre-Sized Logistics",
+    "ticker": "BIG",
+    "type": "ARTIFACT",
+    "basePrice": 120.0,
+    "description": "We move heavy things. We don't move them gently."
+  },
+  {
+    "name": "Scroll-Lock Cybersec",
+    "ticker": "LOCK",
+    "type": "RUNE",
+    "basePrice": 310.0,
+    "description": "Ensuring your digital scrolls aren't read by scrying eyes or middle-management."
+  },
+  {
+    "name": "Djinn Energy Solutions",
+    "ticker": "WISH",
+    "type": "SLIME",
+    "basePrice": 500.0,
+    "description": "Infinite clean energy, but with a catastrophic ironic twist in the small print."
+  },
+  {
+    "name": "Siren Song Marketing",
+    "ticker": "LURE",
+    "type": "SLIME",
+    "basePrice": 195.0,
+    "description": "Our ads are so catchy you'll walk right off a cliff to buy the product."
+  },
+  {
+    "name": "Icarus Aviation",
+    "ticker": "WAX",
+    "type": "ARTIFACT",
+    "basePrice": 2.0,
+    "description": "Disrupting the sky-travel market. Please avoid direct sunlight during flight."
+  },
+  {
+    "name": "Lich-Lord Life Extension",
+    "ticker": "STAY",
+    "type": "INGREDIENT",
+    "basePrice": 2500.0,
+    "description": "The elite's choice for immortality. Requires a phylactery and a total lack of empathy."
+  },
+  {
+    "name": "Gorgon Glassware",
+    "ticker": "STARE",
+    "type": "ARTIFACT",
+    "basePrice": 45.0,
+    "description": "Fine dining plates that turn your food to stone if you look at them wrong."
+  },
+  {
+    "name": "Pegasus Postal Service",
+    "ticker": "HOOF",
+    "type": "INGREDIENT",
+    "basePrice": 30.0,
+    "description": "Air-mail that leaves a glittery trail and the occasional mess on your lawn."
+  },
+  {
+    "name": "Salamander Smelting",
+    "ticker": "HOT",
+    "type": "ARTIFACT",
+    "basePrice": 620.0,
+    "description": "Industry-leading forge temperatures powered by enslaved fire elementals."
+  },
+  {
+    "name": "Void-Space Storage",
+    "ticker": "NULL",
+    "type": "RUNE",
+    "basePrice": 150.0,
+    "description": "Cloud storage where the cloud is a literal hole in reality. No capacity limit."
+  },
+  {
+    "name": "Gremlin IT Support",
+    "ticker": "FIX",
+    "type": "SLIME",
+    "basePrice": 10.0,
+    "description": "They fixed your laptop, but now your microwave speaks in tongues."
+  },
+  {
+    "name": "Titan-Foot Construction",
+    "ticker": "STOMP",
+    "type": "ARTIFACT",
+    "basePrice": 1400.0,
+    "description": "Building skyscrapers by simply stepping on the foundation."
+  },
+  {
+    "name": "Dryad’s Secret Organic Retail",
+    "ticker": "LEAF",
+    "type": "INGREDIENT",
+    "basePrice": 45.0,
+    "description": "Everything is gluten-free, sentient, and very judgmental of your plastic use."
+  },
+  {
+    "name": "Elf-Ears Surveillance",
+    "ticker": "HEAR",
+    "type": "ARTIFACT",
+    "basePrice": 330.0,
+    "description": "High-fidelity listening devices that can hear a leaf fall or a secret plan three kingdoms away."
+  },
+  {
+    "name": "Polymorph Plastic & Resin",
+    "ticker": "FORM",
+    "type": "SLIME",
+    "basePrice": 55.0,
+    "description": "Materials that can become anything you want, provided you feed them protein."
+  },
+  {
+    "name": "Basilisk Eye-Wear",
+    "ticker": "LOOK",
+    "type": "WEAPON",
+    "basePrice": 750.0,
+    "description": "Sunglasses that don't just block the sun—they stop the viewer in their tracks."
+  },
+  {
+    "name": "Exorcist Debt Collection",
+    "ticker": "GONE",
+    "type": "RUNE",
+    "basePrice": 180.0,
+    "description": "We don't just take your furniture; we banish your credit score to the shadow realm."
+  },
+  {
+    "name": "Werewolf HR Solutions",
+    "ticker": "MOON",
+    "type": "SLIME",
+    "basePrice": 95.0,
+    "description": "Managing workplace conflict through primal dominance. Performance reviews happen once a month."
+  },
+  {
+    "name": "Centaur Couriers",
+    "ticker": "RUN",
+    "type": "ARTIFACT",
+    "basePrice": 40.0,
+    "description": "Rapid ground delivery. Do not ask for a ride; it’s a violation of corporate policy."
+  },
+  {
+    "name": "Charybdis Water Filtration",
+    "ticker": "SUCK",
+    "type": "ARTIFACT",
+    "basePrice": 290.0,
+    "description": "A whirlpool in your kitchen sink that cleans water and occasionally your wedding ring."
+  },
+  {
+    "name": "Gnome-Grown Bio-Tech",
+    "ticker": "TINY",
+    "type": "SLIME",
+    "basePrice": 115.0,
+    "description": "Genetically modified mushrooms that grow their own Wi-Fi signals."
+  },
+  {
+    "name": "Hydra-Headed Computing",
+    "ticker": "NODE",
+    "type": "RUNE",
+    "basePrice": 880.0,
+    "description": "Parallel processing where each core has its own ego and appetite."
+  },
+  {
+    "name": "Satyr’s Social Media",
+    "ticker": "WINE",
+    "type": "SLIME",
+    "basePrice": 15.0,
+    "description": "An app designed for pure hedonism and forgetting your responsibilities."
+  },
+  {
+    "name": "Valhalla Beer & Spirit",
+    "ticker": "MEAD",
+    "type": "INGREDIENT",
+    "basePrice": 28.0,
+    "description": "A drink so strong it makes you feel like you can fight a god (you cannot)."
+  },
+  {
+    "name": "Chimera Casting Agency",
+    "ticker": "FACE",
+    "type": "SLIME",
+    "basePrice": 220.0,
+    "description": "Providing actors for every role. Literally. Our actors are three people at once."
+  },
+  {
+    "name": "Oracle of Oracle IT",
+    "ticker": "SOOT",
+    "type": "RUNE",
+    "basePrice": 560.0,
+    "description": "Predictive analytics that actually work because we have a prophet in the server room."
+  },
+  {
+    "name": "Grimm & Co. Legal Firm",
+    "ticker": "LAW",
+    "type": "ARTIFACT",
+    "basePrice": 400.0,
+    "description": "Specializing in ironclad contracts and finding the loophole in your Faustian bargain."
+  },
+  {
+    "name": "Sphinx’s Secret Storage",
+    "ticker": "KEEV",
+    "type": "ARTIFACT",
+    "basePrice": 190.0,
+    "description": "The safest vaults in the world. The password changes every time you breathe."
+  },
+  {
+    "name": "Banshee Alarm Systems",
+    "ticker": "AAAAA",
+    "type": "WEAPON",
+    "basePrice": 130.0,
+    "description": "A security system that lets you know you're being robbed by shattering your eardrums."
+  },
+  {
+    "name": "Abyssal Asset Liquidation",
+    "ticker": "VOID",
+    "type": "ARTIFACT",
+    "basePrice": 0.0,
+    "description": "Turning your solid assets into pure, untaxable nothingness."
+  },
+  {
+    "name": "Dragon-Scale Defense",
+    "ticker": "SHLD",
+    "type": "WEAPON",
+    "basePrice": 1200.0,
+    "description": "Personal armor for CEOs who expect to be fired—literally."
+  },
+  {
+    "name": "Olym-Puss Pet Supply",
+    "ticker": "CAT",
+    "type": "INGREDIENT",
+    "basePrice": 35.0,
+    "description": "Food for the pets of the gods. Mostly just very expensive salmon."
+  }
+]

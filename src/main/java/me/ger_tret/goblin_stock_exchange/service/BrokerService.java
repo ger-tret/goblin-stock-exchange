@@ -15,7 +15,13 @@ public interface BrokerService {
 
     void updateBalance(UUID id, BigDecimal amount);
 
+    public void lockGold(UUID brokerId, BigDecimal amount);
+
+    public void unlockGold(UUID brokerId, BigDecimal amount);
+
     void validateBalance(UUID brokerId, BigDecimal totalCost);
 
     Broker getBrokerById(UUID id);
+
+    public BigDecimal getAvailableGold(UUID id);
 }

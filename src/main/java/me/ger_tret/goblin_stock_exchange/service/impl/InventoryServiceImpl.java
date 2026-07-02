@@ -72,4 +72,35 @@ public class InventoryServiceImpl implements InventoryService {
                 .map(mapper::toInventoryDto)
                 .toList();
     }
+
+    @Override
+    @Transactional
+    public void lockAssets(UUID brokerId, UUID assetId, Integer qty) {
+        Inventory inventory = inventoryRepository.findByBrokerIdAndAssetId(brokerId, assetId)
+                .orElseThrow(() -> new GseException("Inventory not found for asset " + assetId));
+
+        if (getAvailableQuantity(brokerId, assetId) < qty) {
+            throw new GseException("Not enough available assets to lock");
+        }
+
+        inventory.setLockedQuantity(inventory.getLockedQuantity() + qty);
+        inventoryRepository.save(inventory);
+    }
+
+    @Override
+    @Transactional
+    public void unlockAssets(UUID brokerId, UUID assetId, Integer qty) {
+        Inventory inventory = inventoryRepository.findByBrokerIdAndAssetId(brokerId, assetId)
+                .orElseThrow(() -> new GseException("Inventory record not found"));
+
+        inventory.setLockedQuantity(inventory.getLockedQuantity() - qty);
+        inventoryRepository.save(inventory);
+    }
+
+    @Override
+    public Integer getAvailableQuantity(UUID brokerId, UUID assetId){
+        Inventory inventory = inventoryRepository.findByBrokerIdAndAssetId(brokerId, assetId)
+                .orElseThrow(() -> new GseException("Inventory record not found"));
+        return inventory.getQuantity() - inventory.getLockedQuantity();
+    }
 }

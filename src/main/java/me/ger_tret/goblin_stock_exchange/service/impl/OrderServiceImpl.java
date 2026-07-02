@@ -65,9 +65,11 @@ public class OrderServiceImpl implements OrderService {
                     .setScale(4, RoundingMode.HALF_UP);
             log.info("Order type BUY: Checking if broker {} can afford {} gold", brokerId, totalCost);
             brokerService.validateBalance(brokerId, totalCost);
+            brokerService.lockGold(brokerId, totalCost);
         } else {
             log.info("Order type SELL: Checking if broker {} has {} units in inventory", brokerId, request.quantity());
             inventoryService.validateInventory(brokerId, request.assetId(), request.quantity());
+            inventoryService.lockAssets(brokerId, request.assetId(), request.quantity());
         }
 
         Order order = Order.builder()
@@ -131,6 +133,15 @@ public class OrderServiceImpl implements OrderService {
         if (order.getStatus() != OrderStatus.OPEN) {
             throw new GseException("Cannot cancel order in status: " + order.getStatus());
         }
+
+        if (order.getOrderType() == OrderType.BUY) {
+            BigDecimal totalCost = order.getPrice().multiply(BigDecimal.valueOf(order.getQuantity()));
+            brokerService.unlockGold(order.getBroker().getId(), totalCost);
+        } else {
+            inventoryService.unlockAssets(order.getBroker().getId(), order.getAsset().getId(), order.getQuantity());
+        }
+        order.setStatus(OrderStatus.CANCELLED);
+
 
         order.setStatus(OrderStatus.CANCELLED);
         orderRepository.save(order);

@@ -9,6 +9,7 @@ public record BrokerDto(
         UUID id,
         String username,
         BigDecimal goldBalance,
+        BigDecimal lockedGold,
         BrokerType brokerType,
         Integer reputation
 ) {

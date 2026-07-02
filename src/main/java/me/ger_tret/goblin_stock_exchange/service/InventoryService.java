@@ -15,4 +15,11 @@ public interface InventoryService {
     void validateInventory(UUID brokerId, @NotNull(message = "Asset ID cannot be null") UUID uuid, @NotNull(message = "Quantity is required") @Positive(message = "Quantity must be greater than zero") Integer quantity);
 
     List<InventoryResponseDto> getBrokerInventory(UUID brokerId);
+
+    public Integer getAvailableQuantity(UUID brokerId, UUID assetId);
+
+    public void lockAssets(UUID brokerId, UUID assetId, Integer qty);
+
+    public void unlockAssets(UUID brokerId, UUID assetId, Integer qty);
+
 }

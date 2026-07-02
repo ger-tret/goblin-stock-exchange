@@ -6,6 +6,7 @@ public record InventoryResponseDto(
         UUID assetId,
         String assetName,
         String ticker,
+        Integer lockedQuantity,
         Integer quantity
 ) {
 }

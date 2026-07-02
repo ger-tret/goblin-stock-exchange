@@ -18,6 +18,10 @@ public class Inventory {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
+    @Column(name = "locked_quantity", nullable = false)
+    @Builder.Default
+    private Integer lockedQuantity = 0;
+
     @ManyToOne(fetch = FetchType.LAZY)
     private Broker broker;
 

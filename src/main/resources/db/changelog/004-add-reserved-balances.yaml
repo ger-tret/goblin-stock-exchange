@@ -1,0 +1,23 @@
+databaseChangeLog:
+  - changeSet:
+      id: 7
+      author: ger-tret
+      changes:
+        - addColumn:
+            tableName: brokers
+            columns:
+              - column:
+                  name: locked_gold
+                  type: DECIMAL(19, 4)
+                  defaultValueNumeric: 0
+                  constraints:
+                    nullable: false
+        - addColumn:
+            tableName: inventories
+            columns:
+              - column:
+                  name: locked_quantity
+                  type: int
+                  defaultValueNumeric: 0
+                  constraints:
+                    nullable: false

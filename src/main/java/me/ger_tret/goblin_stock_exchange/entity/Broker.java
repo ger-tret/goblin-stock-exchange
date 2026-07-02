@@ -30,6 +30,10 @@ public class Broker {
     @Column(nullable = false)
     private Integer reputation;
 
+    @Column(name = "locked_gold", nullable = false)
+    @Builder.Default
+    private BigDecimal lockedGold = BigDecimal.ZERO;
+
     @Enumerated(EnumType.STRING)
     @Column(name = "broker_type", nullable = false)
     private BrokerType brokerType;
@@ -47,5 +51,10 @@ public class Broker {
             this.reputation = 0;
         }
     }
+
+    public BigDecimal calculateAvailableGold() {
+        return this.goldBalance.subtract(this.lockedGold);
+    }
+
 
 }

@@ -21,7 +21,7 @@ import java.util.UUID;
 public class BrokerServiceImpl implements BrokerService {
     private final BrokerRepository brokerRepository;
     private final EntityMapper mapper;
-    private final static String BROKER_NOT_FOUND_EXCEPTION = "Broker not found";
+    private static final  String BROKER_NOT_FOUND_EXCEPTION = "Broker not found";
 
     @Override
     public BrokerDto getBrokerDtoById(UUID id) {
@@ -79,4 +79,38 @@ public class BrokerServiceImpl implements BrokerService {
         broker.setGoldBalance(newBalance);
         brokerRepository.save(broker);
     }
+
+
+    @Override
+    @Transactional
+    public void lockGold(UUID brokerId, BigDecimal amount) {
+        Broker broker = brokerRepository.findByIdWithLock(brokerId)
+                .orElseThrow(() -> new GseException(BROKER_NOT_FOUND_EXCEPTION));
+
+        if (broker.calculateAvailableGold().compareTo(amount) < 0) {
+            throw new InsufficientGoldException(brokerId);
+        }
+
+        broker.setLockedGold(broker.getLockedGold().add(amount));
+        brokerRepository.save(broker);
+    }
+
+    @Override
+    @Transactional
+    public void unlockGold(UUID brokerId, BigDecimal amount) {
+        Broker broker = brokerRepository.findByIdWithLock(brokerId)
+                .orElseThrow(() -> new GseException(BROKER_NOT_FOUND_EXCEPTION));
+
+        broker.setLockedGold(broker.getLockedGold().subtract(amount));
+        brokerRepository.save(broker);
+    }
+
+    @Override
+    @Transactional
+    public BigDecimal getAvailableGold(UUID id) {
+        Broker broker = brokerRepository.findByIdWithLock(id)
+                .orElseThrow(() -> new GseException(BROKER_NOT_FOUND_EXCEPTION));
+        return broker.getGoldBalance().subtract(broker.getLockedGold());
+    }
+
 }

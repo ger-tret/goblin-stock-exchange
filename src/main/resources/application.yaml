@@ -33,14 +33,12 @@ gse:
     interval: 2000
   simulation:
     enabled: true
-    interval: 10000 # Боты активничают раз в 10 сек
+    interval: 10000
 
-# Настройка логирования
 logging:
   level:
     root: INFO
     me.ger_tret.goblin_stock_exchange: INFO
-    # Чтобы видеть маты Matching Engine, можно поставить DEBUG
     me.ger_tret.goblin_stock_exchange.service.impl.MatchingServiceImpl: DEBUG
   pattern:
     console: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"

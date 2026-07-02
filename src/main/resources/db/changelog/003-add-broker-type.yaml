@@ -1,0 +1,14 @@
+databaseChangeLog:
+  - changeSet:
+      id: 6
+      author: ger-tret
+      changes:
+        - addColumn:
+            tableName: brokers
+            columns:
+              - column:
+                  name: broker_type
+                  type: VARCHAR(20)
+                  defaultValue: 'BOT'
+                  constraints:
+                    nullable: false

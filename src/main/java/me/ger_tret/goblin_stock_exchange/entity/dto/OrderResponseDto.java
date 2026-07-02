@@ -1,7 +1,7 @@
 package me.ger_tret.goblin_stock_exchange.entity.dto;
 
-import me.ger_tret.goblin_stock_exchange.entity.constant.OrderStatus;
-import me.ger_tret.goblin_stock_exchange.entity.constant.OrderType;
+import me.ger_tret.goblin_stock_exchange.entity.enums.OrderStatus;
+import me.ger_tret.goblin_stock_exchange.entity.enums.OrderType;
 
 import java.math.BigDecimal;
 import java.time.OffsetDateTime;

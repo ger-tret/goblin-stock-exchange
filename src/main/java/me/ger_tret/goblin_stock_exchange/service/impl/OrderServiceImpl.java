@@ -7,8 +7,8 @@ import me.ger_tret.goblin_stock_exchange.entity.Asset;
 import me.ger_tret.goblin_stock_exchange.entity.Broker;
 import me.ger_tret.goblin_stock_exchange.entity.Order;
 import me.ger_tret.goblin_stock_exchange.entity.TradeTransaction;
-import me.ger_tret.goblin_stock_exchange.entity.constant.OrderStatus;
-import me.ger_tret.goblin_stock_exchange.entity.constant.OrderType;
+import me.ger_tret.goblin_stock_exchange.entity.enums.OrderStatus;
+import me.ger_tret.goblin_stock_exchange.entity.enums.OrderType;
 import me.ger_tret.goblin_stock_exchange.entity.dto.OrderRequestDto;
 import me.ger_tret.goblin_stock_exchange.entity.dto.OrderResponseDto;
 import me.ger_tret.goblin_stock_exchange.exception.GseException;
@@ -129,7 +129,6 @@ public class OrderServiceImpl implements OrderService {
                 .toList();
     }
 
-    // --- Private Helper Methods ---
 
     private void completeOrder(Order order) {
         order.setStatus(OrderStatus.FILLED);

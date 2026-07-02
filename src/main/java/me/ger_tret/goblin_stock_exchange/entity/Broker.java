@@ -3,6 +3,7 @@ package me.ger_tret.goblin_stock_exchange.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import me.ger_tret.goblin_stock_exchange.entity.enums.BrokerType;
 
 import java.math.BigDecimal;
 import java.time.OffsetDateTime;
@@ -26,7 +27,12 @@ public class Broker {
     @Column(name = "gold_balance", nullable = false)
     private BigDecimal goldBalance;
 
+    @Column(nullable = false)
     private Integer reputation;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "broker_type", nullable = false)
+    private BrokerType brokerType;
 
     @Column(name = "created_at", updatable = false)
     private OffsetDateTime createdAt;

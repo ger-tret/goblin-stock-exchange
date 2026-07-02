@@ -5,7 +5,9 @@ import lombok.RequiredArgsConstructor;
 import me.ger_tret.goblin_stock_exchange.entity.Asset;
 import me.ger_tret.goblin_stock_exchange.entity.Broker;
 import me.ger_tret.goblin_stock_exchange.entity.Inventory;
+import me.ger_tret.goblin_stock_exchange.entity.dto.InventoryResponseDto;
 import me.ger_tret.goblin_stock_exchange.exception.GseException;
+import me.ger_tret.goblin_stock_exchange.mapper.EntityMapper;
 import me.ger_tret.goblin_stock_exchange.repository.AssetRepository;
 import me.ger_tret.goblin_stock_exchange.repository.BrokerRepository;
 import me.ger_tret.goblin_stock_exchange.repository.InventoryRepository;
@@ -13,6 +15,7 @@ import me.ger_tret.goblin_stock_exchange.service.InventoryService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
 import java.util.UUID;
 
 @Service
@@ -22,6 +25,7 @@ public class InventoryServiceImpl implements InventoryService {
     private final InventoryRepository inventoryRepository;
     private final BrokerRepository brokerRepository;
     private final AssetRepository assetRepository;
+    private final EntityMapper mapper;
 
     @Override
     public void updateAssetQuantity(UUID brokerId, UUID assetId, Integer amountChange) {
@@ -56,5 +60,16 @@ public class InventoryServiceImpl implements InventoryService {
         return inventoryRepository.findByBrokerIdAndAssetId(brokerId, assetId)
                 .map(Inventory::getQuantity)
                 .orElse(0);
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public List<InventoryResponseDto> getBrokerInventory(UUID brokerId) {
+
+        List<Inventory> inventories = inventoryRepository.findAllByBrokerId(brokerId);
+
+        return inventories.stream()
+                .map(mapper::toInventoryDto)
+                .toList();
     }
 }

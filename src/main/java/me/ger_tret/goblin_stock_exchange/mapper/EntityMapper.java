@@ -17,6 +17,12 @@ public interface EntityMapper {
     @Mapping(target = "type", source = "orderType")
     OrderResponseDto toOrderResponseDto(Order order);
 
+    @Mapping(target = "assetId", source = "asset.id")
+    @Mapping(target = "assetName", source = "asset.name")
+    @Mapping(target = "ticker", source = "asset.ticker")
+    InventoryResponseDto toInventoryDto(Inventory inventory);
+
+
 
     @Mapping(target = "assetId", source = "asset.id")
     @Mapping(target = "assetName", source = "asset.name")
